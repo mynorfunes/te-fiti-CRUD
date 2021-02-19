@@ -52,53 +52,52 @@ const Formulario = (props) => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Container>
-          <Form onSubmit={HandleSave}>
-            <Row>
-              <Col md>
-                <Form.Group>
-                  <Form.Label>NickName</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="nickname"
-                    placeholder="Nickname"
-                    onChange={handleInputChange}
-                    value={values.nickname}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Email Address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    placeholder="Example@email.com"
-                    onChange={handleInputChange}
-                    value={values.email}
-                  />
-                  <Form.Text className="text-muted">
-                    Don't Worry this will be a Secret
-                  </Form.Text>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    onChange={handleInputChange}
-                    value={values.password}
-                  />
-                </Form.Group>
+      <Container>
+        <Form onSubmit={HandleSave}>
+          <Row>
+            <Col md>
+              <Form.Group>
+                <Form.Label>NickName</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="nickname"
+                  placeholder="Nickname"
+                  onChange={handleInputChange}
+                  value={values.nickname}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="Example@email.com"
+                  onChange={handleInputChange}
+                  value={values.email}
+                />
+                <Form.Text className="text-muted">
+                  Don't Worry this will be a Secret
+                </Form.Text>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  onChange={handleInputChange}
+                  value={values.password}
+                />
+              </Form.Group>
 
-                <Button variant="secondary" type="submit">
-                  {props.currentId === "" ? "Save" : "Update"}
-                </Button>
-              </Col>
-            </Row>
-          </Form>
-        </Container>
-      </header>
+              <Button variant="secondary" type="submit">
+                {props.currentId === "" ? "Save" : "Update"}
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </Container>
+      <br />
     </div>
   );
 };
