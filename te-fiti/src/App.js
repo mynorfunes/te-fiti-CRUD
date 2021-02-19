@@ -1,13 +1,26 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Formulario from "./Components/Form";
 import Cards from "./Components/Card";
-import Table from "./Components/Table";
+import ShowTable from "./Components/Table";
+import Menu from "./Components/Menu";
+import NotFound from "./Components/NotFound";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import { Container, Button, Alert } from "react-bootstrap";
-
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/menu" component={Menu} />
+        <Route exact path="/menu/formulario" component={Formulario} />
+        <Route exact path="/menu/Card" component={Cards} />
+        <Route exact path="/menu/Table" component={ShowTable} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
+  );
+}
+/*
 function App() {
   return (
     <div className="App">
@@ -23,5 +36,5 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
