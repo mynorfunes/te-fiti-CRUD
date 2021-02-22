@@ -1,20 +1,16 @@
-import React from "react";
+import { React } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ShowTable from "./Components/Table";
-import NotFound from "./Components/NotFound";
+import ShowTable from "./ComponentsURL/TableURL";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/menu/Table" component={ShowTable} />
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
-  );
+  return <ShowTable />;
 }
 /*
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="" component={ShowTable} />
+      </Switch>
+    </BrowserRouter>
 function App() {
   return (
     <div className="App">
